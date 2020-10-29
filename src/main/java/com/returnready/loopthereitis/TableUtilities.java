@@ -22,7 +22,26 @@ public class TableUtilities {
     }
 
     public static String getLargeMultiplicationTable() {
-        return null;
+        String table = "";
+        int columnSize = 10;
+        int rowSize = 10;
+
+        for (int column = 1; column <= columnSize; column++) {
+            for (int row = 1; row <= rowSize; row++) {
+                int result = column * row;
+                if (result < 100) {
+                    if (result < 10) {
+                        table += "  ";
+                    } else {
+                        table += " ";
+                    }
+                }
+                table += result + " |";
+            }
+            table += "\n";
+        }
+        System.out.println(table);
+        return table;
     }
 
     public static String getMultiplicationTable(int tableSize) {
