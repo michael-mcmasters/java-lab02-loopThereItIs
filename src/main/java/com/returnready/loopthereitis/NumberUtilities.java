@@ -36,13 +36,13 @@ public class NumberUtilities {
         return squareNumbers;
     }
 
+    // Parameter says start but it's supposed to be stop. This passes test.
     public static String getRange(int start) {
-        // String returnedRange = "";
-        // for (int currentNumberInRange = start; currentNumberInRange < stop; currentNumberInRange = currentNumberInRange + step ) {
-        //     returnedrange = returnedRange;
-        // }
-
-        return null;
+        String numbers = "";
+        for (int i = 0; i < start; i++) {
+            numbers += i;
+        }
+        return numbers;
     }
 
     public static String getRange(int start, int stop) {
