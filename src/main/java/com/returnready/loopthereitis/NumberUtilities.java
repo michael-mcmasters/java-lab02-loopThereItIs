@@ -15,7 +15,6 @@ public class NumberUtilities {
 
     public static String getOddNumbers(int start, int stop) {
         String oddNumbers = "";
-        System.out.println("PRINTING");
         for (int i = start; i < stop; i++) {
             if (i % 2 != 0) {
                 oddNumbers += i;
@@ -25,8 +24,16 @@ public class NumberUtilities {
     }
 
 
+    // Test fails. Not sure why.
     public static String getSquareNumbers(int start, int stop, int step) {
-        return null;
+        String squareNumbers = "";
+        for (int i = start; i < stop; i += step) {
+            double cast = (double) i;
+            if (Math.sqrt(cast) == 0) {
+                squareNumbers += i;
+            }
+        }
+        return squareNumbers;
     }
 
     public static String getRange(int start) {
