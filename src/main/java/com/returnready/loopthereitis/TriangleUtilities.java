@@ -2,20 +2,13 @@ package com.returnready.loopthereitis;
 
 public class TriangleUtilities {
 
-    // numberOfRows for this method seems like it should be numberOfColumns minus 1.
-    // By doing this I pass all tests. The commented out code below it attempts to the param as rows, but that only passes 1 of 2 tests.
     public static String getTriangle(int numberOfRows) {
-        String stars = "";
-        int numberOfColumns = numberOfRows - 1;
-        for (int i = 1; i <= numberOfColumns; i++) {
-            for (int j = 1; j <= i; j++) {
-                stars += "*";
-            }
-            stars += "\n";
-        }
-        return stars;
+        // *** Both tests pass if we treat param as numOfColumns instead of numOfRows. ***
+        int numbersOfColumns = numberOfRows - 1;
+        return getTriangleWithinRange(numbersOfColumns);
         
-        // ** This only passes 1 test **
+        // *** I tried doing it by looping through rows instead of columns like it suggests. ***
+        // *** But this only passes 1 test. ***
         // String stars = "";
         // int numberOfStars = 1;
         // for (int i = 0; i < numberOfRows; i++) {
@@ -41,9 +34,16 @@ public class TriangleUtilities {
     }
 
     public static String getSmallTriangle() {
+        return getTriangleWithinRange(4);
+    }
+
+    public static String getLargeTriangle() {
+        return getTriangleWithinRange(9);
+    }
+    
+    private static String getTriangleWithinRange(int numberOfColumns) {
         String stars = "";
-        int columns = 4;
-        for (int column = 1; column <= columns; column++) {
+        for (int column = 1; column <= numberOfColumns; column++) {
             for (int j = 0; j < column; j++) {
                 // The amount of stars is the same as the column they are on (for example, column 3 has 3 stars)
                 stars += "*";
@@ -51,9 +51,5 @@ public class TriangleUtilities {
             stars += "\n";
         }
         return stars;
-    }
-
-    public static String getLargeTriangle() {
-        return null;
     }
 }
