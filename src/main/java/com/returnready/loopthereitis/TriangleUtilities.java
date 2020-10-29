@@ -3,7 +3,16 @@ package com.returnready.loopthereitis;
 public class TriangleUtilities {
 
     public static String getTriangle(int numberOfRows) {
-        return null;
+        String stars = "";
+        int numberOfColumns = 9;
+        for (int i = 1; i <= numberOfColumns; i++) {
+            for (int j = 1; j <= i; j++) {
+                stars += "*";
+            }
+            stars += "\n";
+        }
+        System.out.println(stars);
+        return stars;
     }
 
     public static String getRow(int numberOfStars) {
