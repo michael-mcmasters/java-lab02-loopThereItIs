@@ -24,14 +24,10 @@ public class NumberUtilities {
     }
 
 
-    // Test fails. Not sure why.
     public static String getSquareNumbers(int start, int stop, int step) {
         String squareNumbers = "";
         for (int i = start; i < stop; i += step) {
-            double cast = (double) i;
-            if (Math.sqrt(cast) == 0) {
-                squareNumbers += i;
-            }
+            squareNumbers += i * i;
         }
         return squareNumbers;
     }
