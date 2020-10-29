@@ -7,7 +7,8 @@ public class NumberUtilitiesTest {
     @Test
     public void testGetRange1A() {
         // : Given
-        String expected = "0123456789";
+        // Note! Fixed this test. If loop stops at 11, it should expect 10 (which was missing from expected).
+        String expected = "012345678910";
         int stop = 11;
 
         // : When
@@ -87,7 +88,8 @@ public class NumberUtilitiesTest {
     @Test
     public void testGetRange3B() {
         // : Given
-        String expected = "100101103104105106107108109";
+        // Fixed this test. It was missing 102. (It originally went: 100 - 101 - 103 etc)
+        String expected = "100101102103104105106107108109";    
         int start = 100;
         int stop = 110;
 
@@ -173,6 +175,7 @@ public class NumberUtilitiesTest {
     @Test
     public void testGetEvenNumbers() {
         // : Given
+        // Note! Originally was checking for odd numbers. I fixed test by changing expected to even numbers.
         String expected = "681012141618";
         int start = 5;
         int stop = 20;
@@ -187,6 +190,7 @@ public class NumberUtilitiesTest {
     @Test
     public void testGetOddNumbers() {
         // : Given
+        // Note! Originally was checking for even numbers. I fixed test by changing expected to odd numbers.
         String expected = "5791113151719";
         int start = 5;
         int stop = 20;
