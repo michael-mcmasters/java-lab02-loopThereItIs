@@ -3,12 +3,25 @@ package com.returnready.loopthereitis;
 
 public class NumberUtilities {
     public static String getEvenNumbers(int start, int stop) {
-        return null;
+        String evenNumbers = "";
+        for (int i = start; i < stop; i++) {
+            if (i % 2 == 0) {
+                evenNumbers += i;
+            }
+        }
+        return evenNumbers;
     }
 
 
     public static String getOddNumbers(int start, int stop) {
-        return null;
+        String oddNumbers = "";
+        System.out.println("PRINTING");
+        for (int i = start; i < stop; i++) {
+            if (i % 2 != 0) {
+                oddNumbers += i;
+            }
+        }
+        return oddNumbers;
     }
 
 
@@ -17,6 +30,11 @@ public class NumberUtilities {
     }
 
     public static String getRange(int start) {
+        // String returnedRange = "";
+        // for (int currentNumberInRange = start; currentNumberInRange < stop; currentNumberInRange = currentNumberInRange + step ) {
+        //     returnedrange = returnedRange;
+        // }
+
         return null;
     }
 
