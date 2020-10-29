@@ -36,7 +36,7 @@ public class NumberUtilities {
         return squareNumbers;
     }
 
-    // Parameter says start but it's supposed to be stop. This passes test.
+    // Parameter says start but it passes test if I treat it as a stop.
     public static String getRange(int start) {
         String numbers = "";
         for (int i = 0; i < start; i++) {
@@ -46,16 +46,31 @@ public class NumberUtilities {
     }
 
     public static String getRange(int start, int stop) {
-        return null;
+        String numbers = "";
+        for (int i = start; i < stop; i++) {
+            numbers += i;
+        }
+        return numbers;
     }
 
 
     public static String getRange(int start, int stop, int step) {
-        return null;
+        String numbers = "";
+        for (int i = start; i < stop; i += step) {
+            numbers += i;
+        }
+        return numbers;
     }
 
 
     public static String getExponentiations(int start, int stop, int step, int exponent) {
-        return null;
+        String exponents = "";
+        for (int i = start; i < stop; i += step) {
+            // Math.pow() is the same as writing i^exponent.
+            // Casting to (int) rounds it. (Rounds down I believe.)
+            int result = (int) Math.pow(i, exponent);
+            exponents += result;
+        }
+        return exponents;
     }
 }
