@@ -13,7 +13,6 @@ public class TriangleUtilities {
             }
             stars += "\n";
         }
-        System.out.println(stars);
         return stars;
         
         // ** This only passes 1 test **
@@ -42,7 +41,16 @@ public class TriangleUtilities {
     }
 
     public static String getSmallTriangle() {
-        return null;
+        String stars = "";
+        int columns = 4;
+        for (int column = 1; column <= columns; column++) {
+            for (int j = 0; j < column; j++) {
+                // The amount of stars is the same as the column they are on (for example, column 3 has 3 stars)
+                stars += "*";
+            }
+            stars += "\n";
+        }
+        return stars;
     }
 
     public static String getLargeTriangle() {
