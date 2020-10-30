@@ -2,52 +2,23 @@ package com.returnready.loopthereitis;
 
 public class TableUtilities {
     public static String getSmallMultiplicationTable() {
-        String results = "";
         int columnSize = 5;
         int rowSize = 5;
-        
-        for (int column = 1; column <= columnSize; column++) {
-            for (int row = 1; row <= rowSize; row++) {
-                int result = column * row;
-                if (result < 10) {
-                    results += "  ";
-                } else {
-                    results += " ";
-                }
-                results += result + " |";
-            }
-            results += "\n";
-        }
-        return results;
+        return getMultiplicationTableInRange(columnSize, rowSize);
     }
 
     public static String getLargeMultiplicationTable() {
-        String table = "";
         int columnSize = 10;
         int rowSize = 10;
-
-        for (int column = 1; column <= columnSize; column++) {
-            for (int row = 1; row <= rowSize; row++) {
-                int result = column * row;
-                if (result < 100) {
-                    if (result < 10) {
-                        table += "  ";
-                    } else {
-                        table += " ";
-                    }
-                }
-                table += result + " |";
-            }
-            table += "\n";
-        }
-        return table;
+        return getMultiplicationTableInRange(columnSize, rowSize);
     }
 
     public static String getMultiplicationTable(int tableSize) {
+        return getMultiplicationTableInRange(tableSize, tableSize);
+    }
+    
+    private static String getMultiplicationTableInRange(int columnSize, int rowSize) {
         String table = "";
-        int columnSize = 20;
-        int rowSize = 20;
-
         for (int column = 1; column <= columnSize; column++) {
             for (int row = 1; row <= rowSize; row++) {
                 int result = column * row;
